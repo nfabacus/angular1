@@ -1,5 +1,5 @@
 // declare a module
-var myAppModule = angular.module('toDoApp', []);
+var toDoApp = angular.module('toDoApp', []);
 
 // configure the module.
 // in this example we will create a greeting filter

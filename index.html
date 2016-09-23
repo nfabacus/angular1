@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html ng-app>
+<!doctype html>
+<html lang="en" ng-app="toDoApp">
   <head>
     <meta charset="utf-8">
-    <title>Angular</title>
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
+    <title>title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="controllers.js"></script>
   </head>
   <body>
-    <div>
-        <label>Name:</label>
-        <input type="text" ng-model="yourName" placeholder="Enter a name here">
-        <hr>
-        <h1>Hello {{yourName}}!</h1>
-      </div>
+    <!-- let's put a div for our controller -->
+    <div ng-controller="ToDoController as controller">
+      {{ controller.todo }}
+      {{ controller.myVar }}
+    </div>
   </body>
 </html>
