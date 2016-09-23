@@ -1,3 +1,4 @@
-toDoApp.controller('ToDoController', function(){
-  this.todo = "ToDo1";
+toDoApp.controller('ToDoController', function() {
+  // two objects, each with two attributes
+  this.todos = [{ task: "ToDo1", completed: true }, { task: "ToDo2", completed: false }];
 });
