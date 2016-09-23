@@ -9,11 +9,14 @@
   </head>
   <body>
     <!-- let's put a div for our controller -->
-    <div ng-controller="ToDoController as controller">
+    <div ng-controller="ToDoController as ctrl">
 
-      <p ng-repeat="todo in controller.todos">
-        {{ todo.task }}: {{ todo.completed ? "completed" : "not completed" }}
+      <p ng-repeat="todo in ctrl.todos">
+        {{ todo.text }}: {{ todo.completed ? "completed" : "not completed" }}
       </p>
+      <input type="text" ng-model="todoText">
+      <button ng-click="ctrl.addToDo(todoText);">Add a ToDo</button>
+      <button ng-click="ctrl.removeToDo();">Remove a ToDo</button>
     </div>
   </body>
 </html>
