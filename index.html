@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="toDoApp">
   <head>
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="controllers.js"></script>
@@ -9,10 +10,12 @@
     </script>
   </head>
   <body>
-    <div ng-controller="ToDoController as ctrl">
+    <div class="container" ng-controller="ToDoController as ctrl">
+      <h1>To Do List</h1>
       <p ng-repeat="todo in ctrl.todos">
+        <input type="checkbox" ng-model="completed" ng-change="todo.toggle(completed);">
         {{ todo.text }}: {{ todo.completed ? "completed" : "not completed" }}
-        <span ng-click="todo.complete();">Complete</span>
+        <!-- <button ng-click="todo.complete();">Complete</button> -->
       </p>
       <input type="text" ng-model="todoText">
       <button ng-click="ctrl.addToDo(todoText);">Add a ToDo</button>
